@@ -1,6 +1,8 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useContext } from 'react';
 
-export const MyContext = createContext();
+const myContext = createContext();
+
+export const useMyContext = () => useContext(myContext);
 
 export const ValueProvider = ({ children }) => {
   const [state, setState] = useState(0);
@@ -12,8 +14,8 @@ export const ValueProvider = ({ children }) => {
   };
 
   return (
-    <MyContext.Provider value={{ state, increment, decrement }}>
+    <myContext.Provider value={{ state, increment, decrement }}>
       {children}
-    </MyContext.Provider>
+    </myContext.Provider>
   );
 };

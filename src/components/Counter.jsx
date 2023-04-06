@@ -1,8 +1,7 @@
-import { useContext } from 'react';
-import { MyContext } from './ValueProvider';
+import { useMyContext } from './ValueProvider';
 
 export const Counter = () => {
-  const { state, increment, decrement } = useContext(MyContext);
+  const { state, increment, decrement } = useMyContext();
 
   return (
     <div>
