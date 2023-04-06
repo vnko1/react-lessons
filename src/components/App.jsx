@@ -1,6 +1,7 @@
-import Box from './Box';
-
-import Button from './Button';
+// import Box from './Box';
+// import Button from './Button';
+import { ValueProvider } from './ValueProvider';
+import { Counter } from './Counter';
 
 export const App = () => {
   return (
@@ -14,8 +15,11 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      <Box />
-      <Button />
+      {/* <Box /> */}
+      {/* <Button /> */}
+      <ValueProvider>
+        <Counter />
+      </ValueProvider>
     </div>
   );
 };
